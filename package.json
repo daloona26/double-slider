@@ -9,10 +9,9 @@
   "author": "ahmad daloon",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.9.2",
+    "htmlnano": "2.0.3",
     "parcel": "^2.9.3",
-    "process": "^0.11.10",
-    "htmlnano": "2.0.3"
+    "process": "^0.11.10"
   },
   "dependencies": {
     "core-js": "^3.31.0",
