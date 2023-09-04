@@ -1,6 +1,7 @@
 {
-  "name": "double-vertical-slider",
+  "name": "double-verticla-slider",
   "version": "1.0.0",
+  "description": "",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
@@ -10,14 +11,13 @@
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.2",
     "parcel": "^2.9.3",
-    "process": "^0.11.10"
+    "process": "^0.11.10",
+    "htmlnano": "2.0.3"
   },
   "dependencies": {
     "core-js": "^3.31.0",
-    "cosmiconfig": "^8.2.0",
     "fractional": "^1.0.0",
     "fracty": "^1.0.11",
     "regenerator-runtime": "^0.13.11"
-  },
-  "description": ""
+  }
 }
