@@ -3,33 +3,30 @@ const slideRight = document.querySelector(".right-slide");
 const slideLeft = document.querySelector(".left-slide");
 const upButton = document.querySelector(".up-button");
 const downButton = document.querySelector(".down-button");
-const slidesLenght = slideRight.querySelectorAll("div").length;
+const slidesLength = slideRight.querySelectorAll("div").length;
 
-let activeSlideIndex = 0;
+let activeIndex = 0;
 
-slideLeft.style.top = `-${(slidesLenght - 1) * 100}vh`;
+slideLeft.style.top = `-${(slidesLength - 1) * 100}vh `;
 
 upButton.addEventListener("click", () => changeSlide("up"));
 downButton.addEventListener("click", () => changeSlide("down"));
 
 const changeSlide = (direction) => {
   const sliderHeight = sliderContainer.clientHeight;
+
   if (direction === "up") {
-    activeSlideIndex++;
-    if (activeSlideIndex > slidesLenght - 1) {
-      activeSlideIndex = 0;
+    activeIndex++;
+    if (activeIndex > slidesLength - 1) {
+      activeIndex = 0;
+    }
+  } else if (direction === "down") {
+    activeIndex--;
+    if (activeIndex > 0) {
+      activeIndex = slidesLength - 1;
     }
   }
-  else if (direction === "down") {
-    activeSlideIndex--;
-    if (activeSlideIndex < 0) {
-      activeSlideIndex = slidesLenght - 1;
-    }
-  }
-  slideRight.style.transform = `translateY(-${
-    activeSlideIndex * sliderHeight
-  }px)`;
-  slideLeft.style.transform = `translateY(${
-    activeSlideIndex * sliderHeight
-  }px)`;
+
+  slideLeft.style.transform = `translateY(${activeIndex * sliderHeight}px)`;
+  slideRight.style.transform = `translateY(-${activeIndex * sliderHeight}px)`;
 };
